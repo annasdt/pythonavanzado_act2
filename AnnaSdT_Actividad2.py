@@ -2,7 +2,14 @@
 # -*- coding: utf-8 -*-
 
 # Importamos las librerias necesarias
+import MySQLdb
+import os
 from gi.repository import Gtk
+
+
+# Establecemos la conexion con la base de datos y creamos unas filas en la tabla para empezar a trabajar
+conexion = MySQLdb.connect(host='localhost', user='familia',passwd='anna', db='Familia')
+cursor = conexion.cursor(MySQLdb.cursors.DictCursor)
 
 # Clase
 class Handler:
@@ -14,25 +21,11 @@ class Handler:
 
     def onButtonPressed(self, button):
         print("Hello World!")
-        
-    def onButtonClick(self, button):
-        if self.__valor:
-            self.__btnLabel = button.get_label()
-            button.set_label("Contenido nuevo")
-            self.__valor = False
-        else:
-            self.__btnLabel = button.get_label()
-            button.set_label("button2")
-            self.__valor = True
-        print self.__btnLabel
-    valor = True
-    btnLabel = ""
 
 
-# Main
-
+# Parte principal dep programa
 builder = Gtk.Builder()
-builder.add_from_file("builder_example.glade")
+builder.add_from_file("AnnaSdT_Actividad2.glade")
 builder.connect_signals(Handler())
 
 window = builder.get_object("window1")
