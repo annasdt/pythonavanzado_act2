@@ -1,0 +1,7 @@
+anna@HP-anna:~$ mysql -u root -p
+mysql> CREATE DATABASE Familia;
+mysql> GRANT ALL ON Familia.* TO 'familia'@'localhost' IDENTIFIED BY 'anna';
+mysql> USE Familia;
+mysql> CREATE TABLE DatosFamilia (id INT, Nombre VARCHAR(100), FechaNacimiento  DATE, LugarResidencia VARCHAR(100), Profesion VARCHAR(100), Aficiones VARCHAR(100));
+
+
