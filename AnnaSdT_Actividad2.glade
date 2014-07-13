@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
-  <object class="GtkImage" id="image1">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-missing-image</property>
-  </object>
   <object class="GtkDialog" id="wacerca">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerraracerca" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dacerca">
         <property name="can_focus">False</property>
@@ -30,6 +27,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerraracerca" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -83,8 +81,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="wactualizar">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="type">popup</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerraractualizar" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dactualizar">
         <property name="can_focus">False</property>
@@ -101,6 +100,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerraractualizar" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -119,6 +119,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="xalign">0.47999998927116394</property>
                 <property name="yalign">0.49000000953674316</property>
                 <property name="image_position">right</property>
+                <signal name="clicked" handler="clicksiactualizar" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -184,8 +185,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="wborrar">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="type">popup</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerrarborrar" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dborrar">
         <property name="can_focus">False</property>
@@ -202,6 +204,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerrarborrar" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -220,6 +223,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="xalign">0.47999998927116394</property>
                 <property name="yalign">0.49000000953674316</property>
                 <property name="image_position">right</property>
+                <signal name="clicked" handler="clicksiborrar" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -285,7 +289,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="wcrear">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerrarcrear" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dcrear">
         <property name="can_focus">False</property>
@@ -303,6 +309,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="clicksicrear" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -318,6 +325,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerrarcrear" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -495,7 +503,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="weditar">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerrareditar" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="deditar">
         <property name="can_focus">False</property>
@@ -513,6 +523,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="clicksieditar" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -528,6 +539,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerrareditar" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -705,7 +717,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="werrfecha">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerrarerrfecha" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="derrfecha">
         <property name="can_focus">False</property>
@@ -726,6 +740,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerrarerrfecha" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -776,7 +791,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="werrid">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
+    <signal name="delete-event" handler="cerrarerrid" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="derrid">
         <property name="can_focus">False</property>
@@ -797,6 +814,7 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <signal name="clicked" handler="cerrarerrid" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -847,7 +865,9 @@ github.com/annasdt/pythonavanzado_act2</property>
   <object class="GtkDialog" id="werrtexto">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
-    <property name="type_hint">dialog</property>
+    <property name="window_position">center</property>
+    <property name="type_hint">menu</property>
+    <signal name="delete-event" handler="cerrarerrtexto" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="derrtexto">
         <property name="can_focus">False</property>
@@ -868,6 +888,9 @@ github.com/annasdt/pythonavanzado_act2</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
+                <property name="xalign">0.49000000953674316</property>
+                <signal name="delete-event" handler="cerrarerrtexto" swapped="no"/>
+                <signal name="clicked" handler="cerrarerrtexto" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -896,7 +919,7 @@ github.com/annasdt/pythonavanzado_act2</property>
               <object class="GtkLabel" id="lerrtexto">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;b&gt;¡Cuidado!&lt;/b&gt; No puedes dejar campos de texto en blanco.</property>
+                <property name="label" translatable="yes">&lt;b&gt;¡Cuidado!&lt;/b&gt; No puedes dejar campos en blanco.</property>
                 <property name="use_markup">True</property>
               </object>
             </child>
@@ -910,16 +933,15 @@ github.com/annasdt/pythonavanzado_act2</property>
       </object>
     </child>
     <action-widgets>
-      <action-widget response="0">berrtexto</action-widget>
+      <action-widget response="-1">berrtexto</action-widget>
     </action-widgets>
   </object>
   <object class="GtkWindow" id="wgeneral">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Datos de familia</property>
-    <property name="window_position">center</property>
-    <property name="default_width">800</property>
-    <property name="default_height">600</property>
+    <property name="window_position">mouse</property>
     <property name="destroy_with_parent">True</property>
+    <signal name="delete-event" handler="cerrargeneral" swapped="no"/>
     <child>
       <object class="GtkToolbar" id="tacciones">
         <property name="visible">True</property>
@@ -935,6 +957,7 @@ github.com/annasdt/pythonavanzado_act2</property>
             <property name="label" translatable="yes">Crear registro</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-add</property>
+            <signal name="clicked" handler="clickcrear" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -942,14 +965,15 @@ github.com/annasdt/pythonavanzado_act2</property>
           </packing>
         </child>
         <child>
-          <object class="GtkToolButton" id="tbobtener">
+          <object class="GtkToolButton" id="tbver">
             <property name="use_action_appearance">False</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="use_action_appearance">False</property>
-            <property name="label" translatable="yes">Obtener registro</property>
+            <property name="label" translatable="yes">Ver tabla</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-index</property>
+            <signal name="clicked" handler="clickver" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -965,6 +989,7 @@ github.com/annasdt/pythonavanzado_act2</property>
             <property name="label" translatable="yes">Actualizar registro</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-edit</property>
+            <signal name="clicked" handler="clickactualizar" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -980,6 +1005,7 @@ github.com/annasdt/pythonavanzado_act2</property>
             <property name="label" translatable="yes">Borrar registro</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-delete</property>
+            <signal name="clicked" handler="clickborrar" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -995,6 +1021,7 @@ github.com/annasdt/pythonavanzado_act2</property>
             <property name="label" translatable="yes">Acerca de</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-help</property>
+            <signal name="clicked" handler="clickacerca" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -1004,102 +1031,27 @@ github.com/annasdt/pythonavanzado_act2</property>
       </object>
     </child>
   </object>
-  <object class="GtkDialog" id="wobtener">
+  <object class="GtkWindow" id="wver">
     <property name="can_focus">False</property>
-    <property name="border_width">5</property>
-    <property name="type_hint">dialog</property>
-    <child internal-child="vbox">
-      <object class="GtkBox" id="dobtener">
+    <property name="window_position">center</property>
+    <signal name="delete-event" handler="cerrarver" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="bxver">
+        <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox" id="aobtener">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="bnoobtener">
-                <property name="label" translatable="yes">Cancelar</property>
-                <property name="use_action_appearance">False</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="bobtener">
-                <property name="label" translatable="yes">Obtener</property>
-                <property name="use_action_appearance">False</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="pack_type">end</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
         <child>
-          <object class="GtkGrid" id="gobtener">
+          <object class="GtkTextView" id="txver">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <child>
-              <object class="GtkLabel" id="lobtid">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="xalign">1</property>
-                <property name="label" translatable="yes">ID: </property>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="eobtid">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="invisible_char">•</property>
-                <property name="width_chars">8</property>
-                <property name="invisible_char_set">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
-              </packing>
-            </child>
+            <property name="can_focus">True</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">0</property>
           </packing>
         </child>
       </object>
     </child>
-    <action-widgets>
-      <action-widget response="0">bnoobtener</action-widget>
-      <action-widget response="0">bobtener</action-widget>
-    </action-widgets>
   </object>
 </interface>
